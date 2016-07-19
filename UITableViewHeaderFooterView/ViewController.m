@@ -77,11 +77,11 @@ static NSString *headerID = @"headerid";
     // 先去缓存池找可重用的header
     ReusableHeader *header = [tableView dequeueReusableHeaderFooterViewWithIdentifier:headerID];
     
-    if (header == nil) {
-        
-        header = [[[NSBundle mainBundle] loadNibNamed:@"ReusableHeader" owner:nil options:nil] lastObject];
-        
-    }
+//    if (header == nil) {
+//        
+//        header = [[[NSBundle mainBundle] loadNibNamed:@"ReusableHeader" owner:nil options:nil] lastObject];
+//        
+//    }
 
     NSLog(@"%p",header);
 

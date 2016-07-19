@@ -5,3 +5,6 @@
 1、使用纯代码：一般可以直接用UITableViewHeaderFooterView类创建对象，因为系统提供的UITableViewHeaderFooterView类有重用机制。也可以自定义tableview的section的头视图header/footer的类，继承自UITableViewHeaderFooterView。用纯代码创建并返回可重用的 section 的 header / footer 和 用纯代码创建并返回可重用的UITableViewCell 是 相同的步骤
 
 2、也可以用xib，xib里放的是UICollectionReusableView控件（可以绑定重用标识）
+
+
+使用xib时，这里出现的一个的bug：所有的子控件都需要添加到一个UIView里，然后将这个UIView直接添加到xib的这个管理类里，而不是UITableViewHeaderFooterView类的contentView属性里，而且，设置颜色时，只能够设置这个UIView以及它里面的子控件的颜色来作为整个xib的背景颜色，否则设置都是无效的。
